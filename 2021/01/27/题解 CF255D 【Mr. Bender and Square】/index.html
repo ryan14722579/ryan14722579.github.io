@@ -645,15 +645,15 @@
 <p>扩散时间: 0   1   2    </p>
 <p>点的数量: 1   5   13</p>
 <p>于是，为了得出扩散时间和点的数量的关系，设一个二次函数为 $y=ax^2+bx+c$ 。（ $x$ 为扩散时间， $y$ 为点的数量）<br>将上表的数据带入二次函数就得到了一个三元一次方程（由于洛谷数学公式无法达到效果，所以只好在本地写好截屏），图片如下：  </p>
-<p><img class="lazyload lazyload-style-9" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://cdn.luogu.com.cn/upload/image_hosting/hft8bny4.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></p>
+<p><img class="lazyload lazyload-style-8" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://cdn.luogu.com.cn/upload/image_hosting/hft8bny4.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></p>
 
 <p>$\therefore$ 这个二次函数为： $y=2x^2+2x+1$   </p>
 <p>现在我们开始考虑边缘阻挡了的点的数量。<br>不难发现，在边缘以外需要减去的点组成了一个像金字塔一样的三角形（第一层有 $1$ 个，第二层有 $3$ 个 ……），图片如下（手画很丑，请见谅）：</p>
-<p><img class="lazyload lazyload-style-9" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://cdn.luogu.com.cn/upload/image_hosting/7ty1nwh0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></p>
+<p><img class="lazyload lazyload-style-8" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://cdn.luogu.com.cn/upload/image_hosting/7ty1nwh0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></p>
 
 <p>这个图片的扩散时间为 $3$ ，蓝色区域代表点，红色边框在 $3\times 3$ 的正方形边缘外，绿色圆圈圈出的三角形即为突出部分。<br>提供一下小学奥数的知识：<br>$1+3+5+…+2n-1=n^2$<br>因此，就可以得出突出部分的点数，其他几个边也一样。</p>
 <p>然后，你会发现突出部分有重叠，如下图绿圈部分：</p>
-<p><img class="lazyload lazyload-style-9" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://cdn.luogu.com.cn/upload/image_hosting/7ty1nwh0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></p>
+<p><img class="lazyload lazyload-style-8" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://cdn.luogu.com.cn/upload/image_hosting/7ty1nwh0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></p>
 
 <p>多次画图后，发现：重叠部分是个每层点数相差1的三角形，于是就可以用高斯求和 $(1+2+3+…+n=\frac{(1+n)n}{2})$ 算出重叠部分点数。<br>所以<strong>总的点数=忽略边缘时的点数-四边突出的点数+重叠部分的点数</strong>。<br>注：+重叠部分的点数是根据容斥原理</p>
 <p>有了公式，就可以二分查找答案了！</p>
@@ -824,8 +824,8 @@ int main() &#123;
 	<div id="gitalk-container"></div>
 <script type="text/javascript">
 	var gitalk = new Gitalk({
-		clientID: 'f3d96f8a65184b823a35',
-		clientSecret: '71bcdbad4da042aee103123a37b20ca6dec6f068',
+		clientID: '28385d079ddfca679ad0',
+		clientSecret: '440cba9b23e013d8803a03189fea405b7d1f717e',
 		repo: 'gitalk',
 		owner: 'ryan14722579',
 		admin: ['ryan14722579'],
